@@ -18,13 +18,21 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Desktop
-  services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        user = "greeter";
+      };
+    };
   };
+
+  # Hyprland
+  programs.hyprland.enable = true;
+
+  # ZSA keyboard (udev-regler for flashing)
+  hardware.keyboard.zsa.enable = true;
 
   # Audio
   services.pulseaudio.enable = false;
@@ -43,7 +51,7 @@
   users.users.steinklo = {
     isNormalUser = true;
     description = "David Haland";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" ];
   };
 
   # System-wide packages (bare ting som trenger root/system-tilgang)

@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./hyprland.nix
+  ];
   home.username = "steinklo";
   home.homeDirectory = "/home/steinklo";
 
@@ -14,11 +17,19 @@
 
     # Generellt
     unzip
+    keymapp
 
     # Apps
     discord
     lutris
-    kdePackages.kate
+
+    # Hyprland-verktøy
+    wofi
+    mako
+    kitty
+    grim
+    slurp
+    wl-clipboard
 
     # Fonts
     nerd-fonts.jetbrains-mono
