@@ -18,12 +18,14 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Desktop
-  services.greetd = {
+  programs.regreet = {
     enable = true;
     settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-        user = "greeter";
+      background = {
+        fit = "Cover";
+      };
+      GTK = {
+        application_prefer_dark_theme = true;
       };
     };
   };
@@ -60,6 +62,7 @@
 
   environment.systemPackages = with pkgs; [
     git
+    kitty
   ];
 
   nixpkgs.config.allowUnfree = true;

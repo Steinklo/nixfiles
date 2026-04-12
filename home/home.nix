@@ -26,7 +26,6 @@
     # Hyprland-verktøy
     wofi
     mako
-    kitty
     grim
     slurp
     wl-clipboard
@@ -34,6 +33,41 @@
     # Fonts
     nerd-fonts.jetbrains-mono
   ];
+
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "JetBrainsMono Nerd Font";
+      size = 12;
+    };
+    themeFile = "Nord";
+    settings = {
+      # Utseende
+      background_opacity = "0.9";
+      window_padding_width = 8;
+
+      # Tabs
+      tab_bar_style = "powerline";
+      tab_powerline_style = "slanted";
+    };
+    keybindings = {
+      # Splits
+      "ctrl+shift+enter" = "new_window";
+      "ctrl+shift+h" = "neighboring_window left";
+      "ctrl+shift+l" = "neighboring_window right";
+      "ctrl+shift+k" = "neighboring_window up";
+      "ctrl+shift+j" = "neighboring_window down";
+
+      # Endre størrelse på splits
+      "ctrl+shift+left" = "resize_window narrower";
+      "ctrl+shift+right" = "resize_window wider";
+      "ctrl+shift+up" = "resize_window taller";
+      "ctrl+shift+down" = "resize_window shorter";
+
+      # Layout-bytte
+      "ctrl+shift+o" = "next_layout";
+    };
+  };
 
   programs.git = {
     enable = true;
