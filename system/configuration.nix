@@ -18,11 +18,12 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Desktop
-  services.displayManager.sddm = {
+  services.greetd = {
     enable = true;
-    wayland.enable = true;
-    theme = "catppuccin-sddm";
-    extraPackages = [ pkgs.catppuccin-sddm ];
+    settings.default_session = {
+      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --cmd Hyprland";
+      user = "greeter";
+    };
   };
 
   # Hyprland
