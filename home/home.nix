@@ -16,6 +16,9 @@
     discord
     lutris
     kdePackages.kate
+
+    # Fonts
+    nerd-fonts.jetbrains-mono
   ];
 
   programs.git = {
