@@ -4,8 +4,17 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      # Monitor (auto-detect)
-      monitor = [ ", preferred, auto, 1" ];
+      # Skjermer: DP-2 (1440p) venstre/primær, HDMI-A-2 (1080p) høyre
+      monitor = [
+        "DP-2, 2560x1440@59.95, 0x0, 1"
+        "HDMI-A-2, 1920x1080@60, 2560x0, 1"
+      ];
+
+      # Workspace 1 på primærskjerm (venstre)
+      workspace = [
+        "1, monitor:DP-2, default:true"
+        "2, monitor:HDMI-A-2, default:true"
+      ];
 
       # Oppstart
       exec-once = [
