@@ -77,7 +77,7 @@
         "$mod SHIFT, 5, movetoworkspace, 5"
 
         # Screenshot
-        ", Print, exec, grim -g \"$(slurp)\" - | wl-copy"
+        "$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
       ];
 
       # Volum
