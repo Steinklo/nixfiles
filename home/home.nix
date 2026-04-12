@@ -12,6 +12,9 @@
     neovim
     vscode
 
+    # Generellt
+    unzip
+
     # Apps
     discord
     lutris
