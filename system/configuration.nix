@@ -18,20 +18,18 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Desktop
-  programs.regreet = {
+  services.displayManager.sddm = {
     enable = true;
-    settings = {
-      background = {
-        fit = "Cover";
-      };
-      GTK = {
-        application_prefer_dark_theme = true;
-      };
-    };
+    wayland.enable = true;
+    theme = "catppuccin-sddm";
+    extraPackages = [ pkgs.catppuccin-sddm ];
   };
 
   # Hyprland
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
 
   # ZSA keyboard (udev-regler for flashing)
   hardware.keyboard.zsa.enable = true;
