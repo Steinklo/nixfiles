@@ -45,6 +45,17 @@
     pulse.enable = true;
   };
 
+  # SwayOSD
+  services.udev.packages = [ pkgs.swayosd ];
+  systemd.services.swayosd-libinput-backend = {
+    description = "SwayOSD LibInput Backend";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.swayosd}/bin/swayosd-libinput-backend";
+      Restart = "on-failure";
+    };
+  };
+
   # Printing
   services.printing.enable = true;
 

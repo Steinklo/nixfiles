@@ -29,6 +29,7 @@
     grim
     slurp
     wl-clipboard
+    swayosd
 
     # Fonts
     nerd-fonts.jetbrains-mono
