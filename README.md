@@ -22,4 +22,5 @@ nix-config           # edit config in neovim
 nix-clean            # garbage collect old generations
 cheat-linux          # linux cheatsheet
 cheat-hyper          # hyprland cheatsheet
+cheat-kitty          # kitty terminal cheatsheet
 ```
