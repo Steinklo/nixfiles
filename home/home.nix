@@ -70,6 +70,24 @@
     };
   };
 
+  home.file."cheatsheet-linux.md".source = ./cheatsheet-linux.md;
+  home.file."cheatsheet-hyprland.md".source = ./cheatsheet-hyprland.md;
+
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      # NixOS
+      nix-rebuild = "sudo nixos-rebuild switch --flake ~/nixfiles#steinklo";
+      nix-config = "nvim ~/nixfiles";
+      nix-update = "nix flake update --flake ~/nixfiles";
+      nix-clean = "sudo nix-collect-garbage -d";
+
+      # Cheatsheets
+      cheat-linux = "cat ~/cheatsheet-linux.md";
+      cheat-hyper = "cat ~/cheatsheet-hyprland.md";
+    };
+  };
+
   programs.git = {
     enable = true;
     settings.user.name = "David Haland";

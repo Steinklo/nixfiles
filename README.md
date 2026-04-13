@@ -6,38 +6,58 @@ NixOS configuration for my desktop, managed with [flakes](https://wiki.nixos.org
 
 ```
 .
-├── flake.nix                    # Entrypoint — defines inputs and system config
-├── flake.lock                   # Pinned dependency versions
+├── flake.nix                       # Entrypoint — inputs and system config
+├── flake.lock                      # Pinned dependency versions
 ├── home/
-│   └── home.nix                 # User packages and config (home-manager)
+│   ├── home.nix                    # User packages, programs, dotfiles
+│   └── hyprland.nix                # Hyprland window manager config
 └── system/
-    ├── configuration.nix        # System-level config (desktop, drivers, services)
-    └── hardware-configuration.nix
+    ├── configuration.nix           # System-level config (drivers, services)
+    └── hardware-configuration.nix  # Auto-generated hardware config
 ```
 
-- **system/** — everything that needs root: desktop environment, NVIDIA drivers, keyd, audio, networking
-- **home/** — user-level packages and dotfiles: dev tools, apps, git config
-
-## Hardware
-
-- AMD Ryzen CPU
-- NVIDIA GPU (proprietary drivers)
-- NVMe + SATA storage
+- **system/** — everything that needs root: Hyprland, NVIDIA drivers, keyd, audio, networking, login manager
+- **home/** — user-level packages and dotfiles: dev tools, apps, terminal, git, Hyprland keybinds
 
 ## Software
 
-- **Desktop:** KDE Plasma 6 with SDDM
-- **Audio:** PipeWire
-- **Shell:** bash
-- **Editor:** Neovim / VS Code
-- **Gaming:** Steam, Lutris
+| Category           | Choice                                              |
+| ------------------ | --------------------------------------------------- |
+| **Window Manager** | [Hyprland](https://hyprland.org/) (Wayland, tiling) |
+| **Login Manager**  | greetd + tuigreet                                   |
+| **Terminal**        | Kitty (Nord theme, JetBrains Mono Nerd Font)        |
+| **Shell**          | Bash                                                |
+| **Launcher**       | wofi                                                |
+| **Notifications**  | mako                                                |
+| **Audio**          | PipeWire (+ ALSA, PulseAudio compat)                |
+| **OSD**            | SwayOSD (volume/brightness)                         |
+| **Screenshots**    | grim + slurp + wl-clipboard                         |
+| **Editor**         | Neovim / VS Code                                    |
+| **Browser**        | Firefox                                             |
+| **Gaming**         | Steam, Lutris                                       |
+| **Dev**            | Node.js, .NET SDK 10, GitHub CLI                    |
+
+## Keybindings
+
+Hyprland keybindings use `Super` as the mod key:
+
+| Bind               | Action                     |
+| ------------------- | -------------------------- |
+| `Super + Return`    | Open terminal              |
+| `Super + D`         | App launcher (wofi)        |
+| `Super + Q`         | Kill window                |
+| `Super + H/J/K/L`  | Focus left/down/up/right   |
+| `Super + 1-5`      | Switch workspace           |
+| `Super + Shift+1-5` | Move window to workspace   |
+| `Super + V`         | Toggle floating            |
+| `Super + F`         | Fullscreen                 |
+| `Super + Shift+S`   | Screenshot selection       |
 
 ## Usage
 
 Rebuild after making changes:
 
 ```bash
-cd ~/nixfiles
 sudo nixos-rebuild switch --flake .#steinklo
 ```
 
