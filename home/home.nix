@@ -86,7 +86,7 @@
       nix-clean = "sudo nix-collect-garbage -d";
 
       # System
-      system-logout = "loginctl terminate-user steinklo";
+      sys-logout = "loginctl terminate-user steinklo";
 
       # Cheatsheets
       cheat-linux = "cat ~/cheatsheet-linux.md";
