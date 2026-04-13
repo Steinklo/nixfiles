@@ -85,6 +85,9 @@
       nix-update = "nix flake update --flake ~/nixfiles";
       nix-clean = "sudo nix-collect-garbage -d";
 
+      # System
+      logout = "loginctl terminate-user steinklo";
+
       # Cheatsheets
       cheat-linux = "cat ~/cheatsheet-linux.md";
       cheat-hyper = "cat ~/cheatsheet-hyprland.md";
