@@ -63,7 +63,7 @@
   users.users.steinklo = {
     isNormalUser = true;
     description = "David Haland";
-    extraGroups = [ "networkmanager" "wheel" "plugdev" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" "docker" ];
   };
 
   # System-wide packages (bare ting som trenger root/system-tilgang)
@@ -93,6 +93,9 @@
       };
     };
   };
+
+  # Docker
+  virtualisation.docker.enable = true;
 
   # NVIDIA
   services.xserver.videoDrivers = [ "nvidia" ];
