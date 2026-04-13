@@ -1,0 +1,5 @@
+result
+.env
+*.secret
+*.key
+*.pem
