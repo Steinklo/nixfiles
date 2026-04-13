@@ -70,8 +70,11 @@
     };
   };
 
+  home.sessionPath = [ "$HOME/.npm-global/bin" ];
+
   home.file."cheatsheet-linux.md".source = ./cheatsheet-linux.md;
   home.file."cheatsheet-hyprland.md".source = ./cheatsheet-hyprland.md;
+  home.file."cheatsheet-kitty.md".source = ./cheatsheet-kitty.md;
 
   programs.bash = {
     enable = true;
@@ -85,6 +88,7 @@
       # Cheatsheets
       cheat-linux = "cat ~/cheatsheet-linux.md";
       cheat-hyper = "cat ~/cheatsheet-hyprland.md";
+      cheat-kitty = "cat ~/cheatsheet-kitty.md";
     };
   };
 
