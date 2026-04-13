@@ -47,6 +47,7 @@
 
   # SwayOSD
   services.udev.packages = [ pkgs.swayosd ];
+  services.dbus.packages = [ pkgs.swayosd ];
   systemd.services.swayosd-libinput-backend = {
     description = "SwayOSD LibInput Backend";
     wantedBy = [ "multi-user.target" ];
