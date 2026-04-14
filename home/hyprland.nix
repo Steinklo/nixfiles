@@ -77,7 +77,7 @@
         "$mod SHIFT, 5, movetoworkspace, 5"
 
         # Screenshot
-        "$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
+        "$mod SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy"
       ];
 
       # Volum
