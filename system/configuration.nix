@@ -68,7 +68,7 @@
   };
 
   # System-wide packages (bare ting som trenger root/system-tilgang)
-  programs.firefox.enable = true;
+  programs.chromium.enable = true;
   programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
