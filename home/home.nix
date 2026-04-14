@@ -12,6 +12,7 @@
     nodejs
     dotnet-sdk_10
     azure-cli
+    terraform
     gh
     neovim
     vscode
