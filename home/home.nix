@@ -11,6 +11,7 @@
     # Utvikling
     nodejs
     dotnet-sdk_10
+    azure-cli
     gh
     neovim
     vscode
