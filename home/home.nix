@@ -60,12 +60,6 @@
       "ctrl+shift+k" = "neighboring_window up";
       "ctrl+shift+j" = "neighboring_window down";
 
-      # Endre størrelse på splits
-      "ctrl+shift+left" = "resize_window narrower";
-      "ctrl+shift+right" = "resize_window wider";
-      "ctrl+shift+up" = "resize_window taller";
-      "ctrl+shift+down" = "resize_window shorter";
-
       # Layout-bytte
       "ctrl+shift+o" = "next_layout";
     };
