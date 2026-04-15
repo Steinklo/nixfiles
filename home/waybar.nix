@@ -77,6 +77,7 @@
       window#waybar {
         background: rgba(46, 52, 64, 0.9);
         border-radius: 8px;
+        border: 1px solid @nord3;
         color: @nord4;
       }
 
@@ -88,7 +89,7 @@
       #disk,
       #network {
         padding: 4px 16px;
-        margin: 0;
+        margin: 4px 0;
         border-radius: 0;
         background: transparent;
         border: none;
