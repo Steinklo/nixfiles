@@ -13,7 +13,7 @@
 
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "cpu" "memory" "disk" "network" ];
-      modules-right = [ "clock" ];
+      modules-right = [ "clock#date" "clock" ];
 
       "hyprland/workspaces" = {
         format = "{name}";
@@ -22,9 +22,13 @@
         };
       };
 
+      "clock#date" = {
+        format = "{:%a %d. %b}";
+        tooltip-format = "<tt>{calendar}</tt>";
+      };
+
       clock = {
         format = "{:%H:%M}";
-        format-alt = "{:%A %d. %B %Y}";
         tooltip-format = "<tt>{calendar}</tt>";
       };
 
@@ -84,6 +88,7 @@
       /* Felles modul-stil */
       #workspaces,
       #clock,
+      #clock.date,
       #cpu,
       #memory,
       #disk,
@@ -124,7 +129,12 @@
         color: @nord4;
       }
 
-      /* Klokke */
+      /* Dato og klokke */
+      #clock.date {
+        color: @nord4;
+        border-right: 1px solid @nord3;
+      }
+
       #clock {
         color: @nord8;
         font-weight: bold;
