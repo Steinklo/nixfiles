@@ -20,6 +20,7 @@
       exec-once = [
         "mako"
         "swayosd-server"
+        "waybar"
       ];
 
       # Variabler
