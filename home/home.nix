@@ -16,6 +16,7 @@
     terraform
     gh
     neovim
+    ripgrep
     vscode
 
     # Generellt
