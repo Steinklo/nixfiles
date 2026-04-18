@@ -75,7 +75,7 @@
     chromium
     git
     kitty
-    wowup-cf
+    claude-code
   ];
 
   nixpkgs.config.allowUnfree = true;
