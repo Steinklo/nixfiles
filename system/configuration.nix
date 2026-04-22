@@ -76,6 +76,7 @@
     git
     kitty
     claude-code
+    wowup-cf
   ];
 
   nixpkgs.config.allowUnfree = true;
