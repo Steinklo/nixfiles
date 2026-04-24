@@ -68,11 +68,10 @@
   };
 
   # System-wide packages (bare ting som trenger root/system-tilgang)
-  programs.chromium.enable = true;
+  programs.firefox.enable = true;
   programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
-    chromium
     git
     kitty
     claude-code
@@ -92,6 +91,11 @@
             "f17" = "ø";
             "f18" = "å";
             "f19" = "æ";
+          };
+          shift = {
+            "f17" = "Ø";
+            "f18" = "Å";
+            "f19" = "Æ";
           };
         };
       };
