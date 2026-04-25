@@ -18,7 +18,8 @@
       "hyprland/workspaces" = {
         format = "{name}";
         persistent-workspaces = {
-          "*" = 5;
+          "DP-2" = [ 1 2 3 4 5 ];
+          "HDMI-A-2" = [ 6 7 8 9 10 ];
         };
       };
 

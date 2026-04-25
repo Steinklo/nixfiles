@@ -4,16 +4,24 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      # Skjermer: DP-2 (1440p) venstre/primær, HDMI-A-2 (1080p) høyre
+      # Skjermer: DP-2 (1440p) primær, HDMI-A-2 (1080p) sentrert over
       monitor = [
         "DP-2, 2560x1440@59.95, 0x0, 1"
-        "HDMI-A-2, 1920x1080@60, 2560x0, 1"
+        "HDMI-A-2, 1920x1080@60, 320x-1080, 1"
       ];
 
-      # Workspace 1 på primærskjerm (venstre)
+      # Workspaces: 1-5 på primær (DP-2), 6-10 på sekundær (HDMI-A-2)
       workspace = [
         "1, monitor:DP-2, default:true"
-        "2, monitor:HDMI-A-2, default:true"
+        "2, monitor:DP-2"
+        "3, monitor:DP-2"
+        "4, monitor:DP-2"
+        "5, monitor:DP-2"
+        "6, monitor:HDMI-A-2, default:true"
+        "7, monitor:HDMI-A-2"
+        "8, monitor:HDMI-A-2"
+        "9, monitor:HDMI-A-2"
+        "10, monitor:HDMI-A-2"
       ];
 
       # Oppstart
@@ -63,12 +71,17 @@
         "$mod, K, movefocus, u"
         "$mod, J, movefocus, d"
 
-        # Bytt workspace
+        # Bytt workspace (1-5 primær, 6-10 sekundær)
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"
         "$mod, 4, workspace, 4"
         "$mod, 5, workspace, 5"
+        "$mod, 6, workspace, 6"
+        "$mod, 7, workspace, 7"
+        "$mod, 8, workspace, 8"
+        "$mod, 9, workspace, 9"
+        "$mod, 0, workspace, 10"
 
         # Flytt vindu til workspace
         "$mod SHIFT, 1, movetoworkspace, 1"
@@ -76,6 +89,11 @@
         "$mod SHIFT, 3, movetoworkspace, 3"
         "$mod SHIFT, 4, movetoworkspace, 4"
         "$mod SHIFT, 5, movetoworkspace, 5"
+        "$mod SHIFT, 6, movetoworkspace, 6"
+        "$mod SHIFT, 7, movetoworkspace, 7"
+        "$mod SHIFT, 8, movetoworkspace, 8"
+        "$mod SHIFT, 9, movetoworkspace, 9"
+        "$mod SHIFT, 0, movetoworkspace, 10"
 
         # Screenshot
         "$mod SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy"
