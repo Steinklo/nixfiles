@@ -35,6 +35,12 @@
   # ZSA keyboard (udev-regler for flashing)
   hardware.keyboard.zsa.enable = true;
 
+  # Razer-periferiutstyr (Naga m.m.)
+  hardware.openrazer = {
+    enable = true;
+    users = [ "steinklo" ];
+  };
+
   # Audio
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

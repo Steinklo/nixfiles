@@ -22,6 +22,7 @@
     # Generellt
     unzip
     keymapp
+    polychromatic
 
     # Apps
     discord
