@@ -22,9 +22,6 @@
     # Generellt
     unzip
     keymapp
-    polychromatic
-    input-remapper
-
     # Apps
     discord
     lutris

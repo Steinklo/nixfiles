@@ -35,15 +35,6 @@
   # ZSA keyboard (udev-regler for flashing)
   hardware.keyboard.zsa.enable = true;
 
-  # Razer-periferiutstyr
-  hardware.openrazer = {
-    enable = true;
-    users = [ "steinklo" ];
-  };
-
-  # Input-remapper (knapp-remapping)
-  services.input-remapper.enable = true;
-
   # Audio
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
