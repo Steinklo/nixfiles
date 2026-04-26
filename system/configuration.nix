@@ -41,6 +41,9 @@
     users = [ "steinklo" ];
   };
 
+  # Input-remapper (knapp-remapping for Naga m.m.)
+  services.input-remapper.enable = true;
+
   # Audio
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
