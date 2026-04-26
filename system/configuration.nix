@@ -35,13 +35,13 @@
   # ZSA keyboard (udev-regler for flashing)
   hardware.keyboard.zsa.enable = true;
 
-  # Razer-periferiutstyr (Naga m.m.)
+  # Razer-periferiutstyr
   hardware.openrazer = {
     enable = true;
     users = [ "steinklo" ];
   };
 
-  # Input-remapper (knapp-remapping for Naga m.m.)
+  # Input-remapper (knapp-remapping)
   services.input-remapper.enable = true;
 
   # Audio
