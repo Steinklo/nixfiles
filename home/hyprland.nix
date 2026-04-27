@@ -4,10 +4,10 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      # Skjermer: DP-2 (1440p) primær, HDMI-A-2 (1080p) sentrert over
+      # Skjermer: DP-2 (1440p) primær, HDMI-A-2 (1080p) til høyre
       monitor = [
         "DP-2, 2560x1440@59.95, 0x0, 1"
-        "HDMI-A-2, 1920x1080@60, 320x-1080, 1"
+        "HDMI-A-2, 1920x1080@60, 2560x0, 1"
       ];
 
       # Workspaces: 1-5 på primær (DP-2), 6-10 på sekundær (HDMI-A-2)
