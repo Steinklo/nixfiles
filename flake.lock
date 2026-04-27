@@ -27,11 +27,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777279306,
-        "narHash": "sha256-QjpuH2jMiRD2yk9OVGX4kRe2nVjKnxDjHLJXVrhi8dQ=",
+        "lastModified": 1777279467,
+        "narHash": "sha256-sOGNLn9RThKtvUxzIZSAlovk4cik+h0WZ6j8fQG+Alk=",
         "owner": "steinklo",
         "repo": "hyprfence",
-        "rev": "ec7730f4c4749fa26c6547dcaa9132e2bf304a4a",
+        "rev": "83a36b30e1d299df7ce64b68304b2fb43e790531",
         "type": "github"
       },
       "original": {
