@@ -20,6 +20,26 @@
         "type": "github"
       }
     },
+    "hyprfence": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1777279306,
+        "narHash": "sha256-QjpuH2jMiRD2yk9OVGX4kRe2nVjKnxDjHLJXVrhi8dQ=",
+        "owner": "steinklo",
+        "repo": "hyprfence",
+        "rev": "ec7730f4c4749fa26c6547dcaa9132e2bf304a4a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "steinklo",
+        "repo": "hyprfence",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1775710090,
@@ -39,6 +59,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "hyprfence": "hyprfence",
         "nixpkgs": "nixpkgs"
       }
     }

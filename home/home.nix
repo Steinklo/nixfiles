@@ -1,9 +1,13 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hyprfence, ... }:
 
 {
   imports = [
     ./hyprland.nix
     ./waybar.nix
+  ];
+
+  wayland.windowManager.hyprland.plugins = [
+    hyprfence.packages.x86_64-linux.default
   ];
   home.username = "steinklo";
   home.homeDirectory = "/home/steinklo";
