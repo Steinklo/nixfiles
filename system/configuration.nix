@@ -80,27 +80,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # Norwegian keys via keyd
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-        settings = {
-          main = {
-            "f17" = "ø";
-            "f18" = "å";
-            "f19" = "æ";
-          };
-          shift = {
-            "f17" = "Ø";
-            "f18" = "Å";
-            "f19" = "Æ";
-          };
-        };
-      };
-    };
-  };
+  # keyd (tom – norske bokstaver håndteres via wtype i Hyprland)
+  services.keyd.enable = false;
 
   # Docker
   virtualisation.docker.enable = true;

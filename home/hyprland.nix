@@ -97,6 +97,14 @@
 
         # Screenshot
         "$mod SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy"
+
+        # Norske bokstaver (via wtype)
+        ", XF86Launch8, exec, wtype ø"
+        ", XF86Launch9, exec, wtype å"
+        ", F19, exec, wtype æ"
+        "SHIFT, XF86Launch8, exec, wtype Ø"
+        "SHIFT, XF86Launch9, exec, wtype Å"
+        "SHIFT, F19, exec, wtype Æ"
       ];
 
       # Volum

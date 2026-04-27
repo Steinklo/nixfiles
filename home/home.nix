@@ -32,6 +32,7 @@
     grim
     slurp
     wl-clipboard
+    wtype
     swayosd
 
     # Fonts
