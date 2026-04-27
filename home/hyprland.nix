@@ -99,7 +99,7 @@
         "$mod SHIFT, S, exec, mkdir -p ~/Pictures/Screenshots && grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy"
 
         # Toggle hyprfence (cursor confinement)
-        "$mod, G, hyprfence:toggle,"
+        "$mod, G, exec, hyprctl dispatch hyprfence:toggle"
 
         # Norske bokstaver (via wtype)
         ", XF86Launch8, exec, wtype ø"
