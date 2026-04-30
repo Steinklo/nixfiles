@@ -60,6 +60,24 @@
   # Printing
   services.printing.enable = true;
 
+  # Plex Media Server
+  services.plex = {
+    enable = true;
+    openFirewall = true;
+  };
+
+  fileSystems."/mnt/data" = {
+    device = "/dev/disk/by-label/data";
+    fsType = "ext4";
+    options = [ "defaults" "nofail" ];
+  };
+
+  fileSystems."/mnt/kingston" = {
+    device = "/dev/disk/by-label/KINGSTON";
+    fsType = "exfat";
+    options = [ "defaults" "nofail" "uid=plex" "gid=plex" ];
+  };
+
   # Users
   users.users.steinklo = {
     isNormalUser = true;
