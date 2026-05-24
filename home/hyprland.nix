@@ -29,6 +29,9 @@
         "mako"
         "swayosd-server"
         "waybar"
+        "[workspace 6 silent] firefox"
+        "[workspace 7 silent] discord"
+        "[workspace 8 silent] steam"
       ];
 
       # Variabler
