@@ -126,7 +126,7 @@
         "$mod, mouse:273, resizewindow"
       ];
 
-      windowrulev2 = [
+      windowrule = [
         "workspace 6 silent, class:^(firefox)$"
         "workspace 7 silent, class:^(discord)$"
         "workspace 8 silent, class:^(steam)$"
