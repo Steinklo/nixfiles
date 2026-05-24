@@ -127,9 +127,9 @@
       ];
 
       windowrule = [
-        "workspace 6 silent, ^(firefox)$"
-        "workspace 7 silent, ^(discord)$"
-        "workspace 8 silent, ^(steam)$"
+        "match:class firefox, workspace 6 silent"
+        "match:class discord, workspace 7 silent"
+        "match:class steam, workspace 8 silent"
       ];
 
       plugin = {
