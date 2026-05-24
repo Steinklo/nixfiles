@@ -29,9 +29,9 @@
         "mako"
         "swayosd-server"
         "waybar"
-        "[workspace 6 silent] firefox"
-        "[workspace 7 silent] discord"
-        "[workspace 8 silent] steam"
+        "firefox"
+        "discord"
+        "steam"
       ];
 
       # Variabler
@@ -124,6 +124,12 @@
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
+      ];
+
+      windowrulev2 = [
+        "workspace 6 silent, class:^(firefox)$"
+        "workspace 7 silent, class:^(discord)$"
+        "workspace 8 silent, class:^(steam)$"
       ];
 
       plugin = {
