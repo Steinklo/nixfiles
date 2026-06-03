@@ -88,6 +88,7 @@
   # System-wide packages (bare ting som trenger root/system-tilgang)
   programs.firefox.enable = true;
   programs.steam.enable = true;
+  programs.nix-ld.enable = true;
 
   environment.systemPackages = with pkgs; [
     git
