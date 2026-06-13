@@ -60,15 +60,12 @@
       tab_powerline_style = "slanted";
     };
     keybindings = {
-      # Splits
-      "ctrl+shift+enter" = "new_window";
-      "ctrl+shift+h" = "neighboring_window left";
-      "ctrl+shift+l" = "neighboring_window right";
-      "ctrl+shift+k" = "neighboring_window up";
-      "ctrl+shift+j" = "neighboring_window down";
+      # Tab-navigasjon
+      "ctrl+shift+h" = "previous_tab";
+      "ctrl+shift+l" = "next_tab";
 
-      # Layout-bytte
-      "ctrl+shift+o" = "next_layout";
+      # Lukk vindu
+      "ctrl+shift+q" = "close_window";
     };
   };
 
