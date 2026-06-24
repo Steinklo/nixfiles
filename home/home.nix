@@ -15,6 +15,7 @@
   home.packages = with pkgs; [
     # Utvikling
     nodejs
+    python3
     dotnet-sdk_10
     azure-cli
     terraform
